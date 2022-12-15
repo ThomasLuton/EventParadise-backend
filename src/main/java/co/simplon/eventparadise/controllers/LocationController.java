@@ -13,7 +13,7 @@ import co.simplon.eventparadise.dtos.LocationView;
 import co.simplon.eventparadise.entitites.Location;
 
 @RestController
-@RequestMapping("/location")
+@RequestMapping("/locations")
 @CrossOrigin
 public class LocationController {
 

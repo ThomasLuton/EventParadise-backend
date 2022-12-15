@@ -18,7 +18,7 @@ import co.simplon.eventparadise.dtos.EventView;
 import co.simplon.eventparadise.entitites.Event;
 
 @RestController
-@RequestMapping("/event")
+@RequestMapping("/events")
 @CrossOrigin
 public class EventController {
 

@@ -6,8 +6,10 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class EventCreate {
+    @Size(max = 255)
     @NotEmpty
     private String name;
     @FutureOrPresent
@@ -20,6 +22,7 @@ public class EventCreate {
     @DecimalMin(value = "0.01")
     @NotNull
     private Double rate;
+    @Size(max = 1000)
     @NotEmpty
     private String description;
     private Long id;

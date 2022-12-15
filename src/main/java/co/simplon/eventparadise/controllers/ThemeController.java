@@ -13,7 +13,7 @@ import co.simplon.eventparadise.dtos.ThemeView;
 import co.simplon.eventparadise.entitites.Theme;
 
 @RestController
-@RequestMapping("/theme")
+@RequestMapping("/themes")
 @CrossOrigin
 public class ThemeController {
 
