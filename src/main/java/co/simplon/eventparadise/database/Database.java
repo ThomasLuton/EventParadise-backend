@@ -18,28 +18,30 @@ public class Database {
     private static final Map<Long, Event> EVENTS = new HashMap<>();
 
     static {
-	Location paris = new Location();
-	paris.setName("Paris");
-	Database.save(paris);
-	Location rennes = new Location();
-	rennes.setName("Rennes");
-	Database.save(rennes);
-	Location marseille = new Location();
-	marseille.setName("Marseille");
-	Database.save(marseille);
-
-	Theme ecologie = new Theme();
-	ecologie.setName("Ecologie");
-	Database.save(ecologie);
-	Theme ressourceHumaine = new Theme();
-	ressourceHumaine.setName("Ressources humaines");
-	Database.save(ressourceHumaine);
-	Theme tech = new Theme();
-	tech.setName("Tech");
-	Database.save(tech);
+	Location location = new Location();
+	location.setName("Paris");
+	Database.save(location);
+	location = new Location();
+	location.setName("Rennes");
+	Database.save(location);
+	location = new Location();
+	location.setName("Marseille");
+	Database.save(location);
     }
 
-    public static void save(Location location) {
+    static {
+	Theme theme = new Theme();
+	theme.setName("Ecologie");
+	Database.save(theme);
+	theme = new Theme();
+	theme.setName("Ressources humaines");
+	Database.save(theme);
+	theme = new Theme();
+	theme.setName("Tech");
+	Database.save(theme);
+    }
+
+    private static void save(Location location) {
 	Database.locationId++;
 	location.setId(locationId);
 	LOCATIONS.put(locationId, location);
@@ -53,7 +55,7 @@ public class Database {
 	return LOCATIONS.get(id);
     }
 
-    public static void save(Theme theme) {
+    private static void save(Theme theme) {
 	Database.themeId++;
 	theme.setId(themeId);
 	THEMES.put(themeId, theme);

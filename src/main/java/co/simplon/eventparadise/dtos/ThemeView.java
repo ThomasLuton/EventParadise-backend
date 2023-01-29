@@ -1,19 +1,11 @@
 package co.simplon.eventparadise.dtos;
 
 public class ThemeView {
-    private String name;
     private Long id;
+    private String name;
 
     public ThemeView() {
 	// TODO Auto-generated constructor stub
-    }
-
-    public String getName() {
-	return name;
-    }
-
-    public void setName(String name) {
-	this.name = name;
     }
 
     public Long getId() {
@@ -22,6 +14,14 @@ public class ThemeView {
 
     public void setId(Long id) {
 	this.id = id;
+    }
+
+    public String getName() {
+	return name;
+    }
+
+    public void setName(String name) {
+	this.name = name;
     }
 
     @Override
